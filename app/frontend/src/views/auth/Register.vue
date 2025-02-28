@@ -57,7 +57,7 @@
 
     onMounted(() => {
         if (!props.permissions.includes('login')) {
-            router.push({ name: 'Profile' })
+            router.push({ name: 'profile' })
         }
     })
 </script>

@@ -8,6 +8,12 @@ class OrderController extends Controller
 {
     public function index(Request $request)
     {
+        if(!canDo('orders_list')) 
+        {
+
+            return response()->json(['message' => 'You are not allowed to view orders'], 403);
+        }
+
         $user = $request->user();
 
         return response()->json([

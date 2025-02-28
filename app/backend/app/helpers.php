@@ -6,7 +6,7 @@ if (!function_exists('canDo')) {
         $user = auth()->user();
 
         if (!$user) {
-            $allowed = ['home', 'register', 'login'];
+            $allowed = ['home', 'register', 'login', 'permissions'];
         } else {
             $allowed = $user->group->permissions;
         }
