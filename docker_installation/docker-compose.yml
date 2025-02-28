@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ../app:/app
+    ports:
+      - "9001:9000"
+
+  npm:
+    build:
+      context: .
+      dockerfile: Dockerfile.npm
+    container_name: npm
+    volumes:
+      - ../app:/usr/src/app
+    working_dir: /usr/src/app
+    stdin_open: true
+    tty: true
+
+volumes:
+  db_data:
