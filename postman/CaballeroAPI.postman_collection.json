@@ -1,0 +1,158 @@
+{
+    "info": {
+      "name": "Caballero API Collection",
+      "description": "Collection for testing Caballero API endpoints (User and Order controllers). The collection contains the following requests:\n\n1. Register\n2. Login\n3. Permissions\n4. Logout\n5. Profile\n6. Users\n7. Orders . Requests Register and Login doesn't require authentication. The token is set in the environment variable after successful login and used in the subsequent requests. The collection uses the base_url variable to set the base URL of the API.",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Register",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n    \"name\": \"John Doe\",\n    \"email\": \"john@example.com\",\n    \"password\": \"password\",\n    \"password_confirmation\": \"password\"\n}"
+          },
+          "url": {
+            "raw": "{{base_url}}/register",
+            "host": ["{{base_url}}"],
+            "path": ["register"]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Login",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n    \"email\": \"john@example.com\",\n    \"password\": \"password\"\n}"
+          },
+          "url": {
+            "raw": "{{base_url}}/login",
+            "host": ["{{base_url}}"],
+            "path": ["login"]
+          }
+        },
+        "response": [],
+        "event": [
+          {
+            "listen": "test",
+            "script": {
+              "exec": [
+                "if (pm.response.code === 200) {",
+                "    var jsonData = pm.response.json();",
+                "    pm.environment.set(\"token\", jsonData.access_token);",
+                "}"
+              ],
+              "type": "text/javascript"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Permissions",
+        "request": {
+          "method": "GET",
+          "header": [
+            {
+              "key": "Authorization",
+              "value": "Bearer {{token}}"
+            }
+          ],
+          "url": {
+            "raw": "{{base_url}}/permissions",
+            "host": ["{{base_url}}"],
+            "path": ["permissions"]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Profile",
+        "request": {
+          "method": "GET",
+          "header": [
+            {
+              "key": "Authorization",
+              "value": "Bearer {{token}}"
+            }
+          ],
+          "url": {
+            "raw": "{{base_url}}/profile",
+            "host": ["{{base_url}}"],
+            "path": ["profile"]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Users",
+        "request": {
+          "method": "GET",
+          "header": [
+            {
+              "key": "Authorization",
+              "value": "Bearer {{token}}"
+            }
+          ],
+          "url": {
+            "raw": "{{base_url}}/users",
+            "host": ["{{base_url}}"],
+            "path": ["users"]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Orders",
+        "request": {
+          "method": "GET",
+          "header": [
+            {
+              "key": "Authorization",
+              "value": "Bearer {{token}}"
+            }
+          ],
+          "url": {
+            "raw": "{{base_url}}/orders",
+            "host": ["{{base_url}}"],
+            "path": ["orders"]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Logout",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Authorization",
+              "value": "Bearer {{token}}"
+            }
+          ],
+          "url": {
+            "raw": "{{base_url}}/logout",
+            "host": ["{{base_url}}"],
+            "path": ["logout"]
+          }
+        },
+        "response": []
+      }
+    ]
+  }
+  
