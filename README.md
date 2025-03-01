@@ -2,7 +2,7 @@
 
 ## Project Explanation
 
-This project is a test task assignment for Coballero teams, designed to demonstrate our skills in both frontend and backend development. It comprises two main components:
+This project is a test task assignment for Coballero teams, designed to demonstrate my skills in both frontend and backend development. It comprises two main components:
 
 - **Frontend:** Built with Vue3.
 - **Backend:** Built with Laravel.
