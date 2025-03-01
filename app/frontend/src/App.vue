@@ -3,6 +3,7 @@
   import { RouterLink, RouterView } from 'vue-router'
   import Logout from '@/views/auth/Logout.vue'
 
+
 </script>
 
 <template>
@@ -17,6 +18,8 @@
           <li><RouterLink to="/login" v-if="permissionsState.permissions.includes('login')">Login</RouterLink></li>
           <li><RouterLink to="/register" v-if="permissionsState.permissions.includes('register')">Register</RouterLink></li>
           <li><RouterLink to="/profile" v-if="permissionsState.permissions.includes('profile')">Profile</RouterLink></li>
+          <li><RouterLink to="/orders" v-if="permissionsState.permissions.includes('orders_list')">Orders</RouterLink></li>
+          <li><RouterLink to="/users" v-if="permissionsState.permissions.includes('users_list')">Users</RouterLink></li>
           <li><Logout v-if="permissionsState.permissions.includes('logout')" /></li>
         </ul>
       </nav>

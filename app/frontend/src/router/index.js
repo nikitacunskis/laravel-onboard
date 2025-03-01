@@ -40,6 +40,24 @@ const routes = [
     })
   },
   {
+    path: '/orders',
+    name: 'orders',
+    component: () => import('../views/OrdersView.vue'),
+    props: route => ({
+      permissions: route.meta.permissions,
+      error: route.meta.error
+    })
+  },
+  {
+    path: '/users',
+    name: 'users',
+    component: () => import('../views/UsersView.vue'),
+    props: route => ({
+      permissions: route.meta.permissions,
+      error: route.meta.error
+    })
+  },
+  {
     path: '/404',
     name: '404',
     component: () => import('../views/404.vue'),

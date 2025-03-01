@@ -6,6 +6,7 @@
       <div v-if="profile && !loading">
         <p><strong>Name:</strong> {{ profile.name }}</p>
         <p><strong>Email:</strong> {{ profile.email }}</p>
+        <p><strong>Group:</strong> {{ profile.group.name }}</p>
       </div>
     </div>
   </template>
