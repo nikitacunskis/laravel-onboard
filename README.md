@@ -50,8 +50,11 @@ Follow the steps below to set up the project:
      ```
 
 4. **Frontend Setup:**
-   - Exit the backend shell.
-   - Navigate to the frontend environment (or enter the frontend container if applicable).
+   - Exit the backend shell.   
+   - Enter the frontend container by running:
+     ```bash
+     docker exec -it frontend /bin/bash
+     ```
    - Run:
      ```bash
      npm i
