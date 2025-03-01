@@ -8,6 +8,34 @@ a,
   padding: 3px;
 }
 
+.error {
+  color: red;
+  margin-bottom: 1rem;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+thead th {
+  background-color: #000000;
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 2px solid #ddd;
+}
+
+tbody td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+  background-color: #000000;
+}
+
 @media (hover: hover) {
   a:hover {
     background-color: hsla(0, 0%, 80%, 0.321);

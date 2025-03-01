@@ -99,8 +99,11 @@ class UserController extends Controller
             return response()->json(['message' => 'You are not allowed to list users'], 403);
         }
 
+        $users = User::all();
+
         return response()->json([
-            'message' => 'List of users'
+            'message' => 'List of order counts by user',
+            'data' => $users,
         ]);
     }
 

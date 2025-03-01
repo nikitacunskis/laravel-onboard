@@ -26,6 +26,6 @@
 <template>
   <main>
     {{ props.error }}
-    afsdfasdfa 
+    Home page 
   </main>
 </template>
