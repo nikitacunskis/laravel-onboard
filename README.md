@@ -1,11 +1,12 @@
-# Coballero Test Task Assignment
+# Laravel onboard
 
 ## Project Explanation
 
-This project is a test task assignment for Coballero teams, designed to demonstrate my skills in both frontend and backend development. It comprises two main components:
+This project is build to fast onboard something new. It comprises three main components:
 
-- **Frontend:** Built with Vue3.
-- **Backend:** Built with Laravel.
+- **Docker:** It allows you to run project in container and set-up it fast anywhere
+- **Frontend:** Built with Vue3. There's integration between Vue3.js for front-end and safe connection to backend.
+- **Backend:** Built with Laravel. Laravel is designed as API first here.
 
 ### Key Features
 
@@ -31,7 +32,7 @@ Follow the steps below to set up the project:
     ```
   - Edit the `.env` file to set your database credentials:
     ```
-    DB_DATABASE=coballero
+    DB_DATABASE=onboard
     DB_PASSWORD=root
     ```
     *Note:* If you have customized the MySQL credentials in `docker-compose.yml`, update the `.env` file accordingly.
@@ -76,6 +77,6 @@ Follow the steps below to set up the project:
 
 ## Summary
 
-This project successfully integrates a Vue3 frontend with a Laravel backend, featuring a robust login and registration system along with secure, restricted views. Additionally, a MySQL dump has been provided as requested, although it is optional given the presence of the database seeder.
+This project successfully integrates a Vue3 frontend with a Laravel backend, featuring a robust login and registration system along with secure, restricted views.
 
 Happy coding!
