@@ -80,3 +80,8 @@ Follow the steps below to set up the project:
 This project successfully integrates a Vue3 frontend with a Laravel backend, featuring a robust login and registration system along with secure, restricted views.
 
 Happy coding!
+
+
+---
+
+Built by [Nikita Cunskis](https://cunskis.lv/) — senior engineer and fractional CTO, Riga. More tools: [cunskis.lv/open-source](https://cunskis.lv/open-source).
